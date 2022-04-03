@@ -22,7 +22,7 @@ class needHelpPage:
     def needHelp(self):
         # Access to URL and test with invalid input
         self.driver.get(self.url)
-        time.sleep(1)
+        time.sleep(2)
 
         # Click help link
         self.driver.find_element_by_id("forgot-password-link").click()
@@ -30,11 +30,11 @@ class needHelpPage:
     def input_email(self):
         field = self.driver.find_element_by_id('forgot-email')
         field.send_keys(self.invalid_email)
-        time.sleep(1)
+        time.sleep(2)
 
     def send_password_reset(self):
         self.driver.find_element_by_id('resetBtn').click()
-        time.sleep(1)
+        time.sleep(2)
     # if email address missing @ sign should get the error message
 
     def verify_error_msg(self):
@@ -44,6 +44,7 @@ class needHelpPage:
         display_err = err_msg.text
         assert display_err == self.expected_msg, "The display error message is not the same."
         print('PASS')
+        time.sleep(4)
 
     def main(self):
         self.needHelp()
