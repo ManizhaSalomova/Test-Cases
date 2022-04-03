@@ -7,8 +7,8 @@ import time
 class InvalidUserLoginError:
     # Declairing variable
     url = "https://www.hudl.com/login"
-    username = 'jingonya@yahoo.com'
-    password = 'Madina0909$'
+    username = 'Your Email Here'
+    password = 'Your Password Here'
 
     # define the browser we run the test (Chrome)
     def __init__(self):
